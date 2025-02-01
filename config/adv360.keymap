@@ -33,7 +33,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <20000>;
+            tapping-term-ms = <500>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-on-release;
@@ -45,7 +45,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <20000>;
+            tapping-term-ms = <500>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-on-release;
