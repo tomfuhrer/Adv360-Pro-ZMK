@@ -278,6 +278,12 @@
             require-prior-idle-ms = <100>;
         };
 
+        shift_tab {
+            bindings = <&kp RS(TAB)>;
+            key-positions = <70 41 42>;
+            require-prior-idle-ms = <100>;
+        };
+
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <29 30 65>;
