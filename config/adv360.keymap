@@ -322,7 +322,7 @@
             bindings = <
 &kp EQUAL       &kp N1             &kp N2           &kp N3           &kp N4               &kp N5  &tog 2                                                     &mo 4      &kp N6  &kp N7                &kp N8            &kp N9            &kp N0                      &kp MINUS
 &kp TAB         &kp Q              &kp W            &kp E            &kp R                &kp T   &none                                                      &none      &kp Y   &kp U                 &kp I             &kp O             &kp P                       &kp BSLH
-&kp ESC         &lhs LEFT_SHIFT A  &lhm LEFT_GUI S  &lhm LEFT_ALT D  &lhm LEFT_CONTROL F  &kp G   &none     &mo 2    &none         &none          &none      &none      &kp H   &rhm RIGHT_CONTROL J  &rhm RIGHT_ALT K  &rhm RIGHT_GUI L  &rhs RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp ESC         &lhm LEFT_GUI A  &lhm LEFT_ALT S  &lhm LEFT_CONTROL D  &lhs LEFT_SHIFT F  &kp G   &none     &mo 2    &none         &none          &none      &none      &kp H   &rhs RIGHT_SHIFT J  &rhm RIGHT_CONTROL K  &rhm RIGHT_ALT L  &rhm RIGHT_GUI SEMICOLON  &kp SQT
 &kp LEFT_SHIFT  &kp Z              &kp X            &kp C            &kp V                &kp B                      &kp HOME      &kp PAGE_UP                          &kp N   &kp M                 &kp COMMA         &kp DOT           &kp SLASH                   &kp RIGHT_SHIFT
 &mo 3           &kp GRAVE          &kp CAPS         &kp LEFT_ARROW   &kp RIGHT_ARROW              &kp BSPC  &kp DEL  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp DOWN_ARROW        &kp UP_ARROW      &kp LBKT          &kp RBKT                    &mo 3
             >;
@@ -332,7 +332,7 @@
             bindings = <
 &kp LBKT         &engram_1          &engram_2        &engram_3        &engram_4            &engram_5             &trans                                      &trans  &engram_6              &engram_7             &engram_8         &engram_9         &engram_0           &kp RBKT
 &engram_at_sign  &kp B              &kp Y            &kp O            &kp U                &engram_single_quote  &trans                                      &trans  &engram_double_quotes  &kp L                 &kp D             &kp W             &kp V               &engram_hash
-&kp ESCAPE       &lhs LEFT_SHIFT C  &lhm LEFT_GUI I  &lhm LEFT_ALT E  &lhm LEFT_CONTROL A  &engram_comma         &trans  &trans  &trans      &trans  &trans  &trans  &engram_period         &rhm RIGHT_CONTROL H  &rhm RIGHT_ALT T  &rhm RIGHT_GUI S  &rhs RIGHT_SHIFT N  &kp TAB
+&kp ESCAPE       &lhm LEFT_GUI C  &lhm LEFT_ALT I  &lhm LEFT_CONTROL E  &lhs LEFT_SHIFT A  &engram_comma         &trans  &trans  &trans      &trans  &trans  &trans  &engram_period         &rhs RIGHT_SHIFT H  &rhm RIGHT_CONTROL T  &rhm RIGHT_ALT S  &rhm RIGHT_GUI N  &kp TAB
 &trans           &kp G              &kp X            &kp J            &kp K                &kp MINUS                             &trans      &trans                  &engram_question       &kp R                 &kp M             &kp F             &kp P               &trans
 &trans           &kp Z              &caps_word       &trans           &trans                                     &trans  &trans  &trans      &trans  &trans  &trans                         &trans                &trans            &engram_slash     &kp Q               &trans
             >;
