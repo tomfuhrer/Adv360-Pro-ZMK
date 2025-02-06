@@ -33,26 +33,50 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <375>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-on-release;
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 37 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
             flavor = "balanced";
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         rhm: right_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <375>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
             flavor = "balanced";
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
+        };
+
+        lhs: left_homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_HOMEROW_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <375>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 37 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
+            flavor = "balanced";
+        };
+
+        rhs: right_homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_HOMEROW_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <375>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
+            flavor = "balanced";
         };
 
         engram_1: engram_1 {
@@ -298,7 +322,7 @@
             bindings = <
 &kp EQUAL       &kp N1             &kp N2           &kp N3           &kp N4               &kp N5  &tog 2                                                     &mo 4      &kp N6  &kp N7                &kp N8            &kp N9            &kp N0                      &kp MINUS
 &kp TAB         &kp Q              &kp W            &kp E            &kp R                &kp T   &none                                                      &none      &kp Y   &kp U                 &kp I             &kp O             &kp P                       &kp BSLH
-&kp ESC         &lhm LEFT_SHIFT A  &lhm LEFT_GUI S  &lhm LEFT_ALT D  &lhm LEFT_CONTROL F  &kp G   &none     &mo 2    &none         &none          &none      &none      &kp H   &rhm RIGHT_CONTROL J  &rhm RIGHT_ALT K  &rhm RIGHT_GUI L  &rhm RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp ESC         &lhs LEFT_SHIFT A  &lhm LEFT_GUI S  &lhm LEFT_ALT D  &lhm LEFT_CONTROL F  &kp G   &none     &mo 2    &none         &none          &none      &none      &kp H   &rhm RIGHT_CONTROL J  &rhm RIGHT_ALT K  &rhm RIGHT_GUI L  &rhs RIGHT_SHIFT SEMICOLON  &kp SQT
 &kp LEFT_SHIFT  &kp Z              &kp X            &kp C            &kp V                &kp B                      &kp HOME      &kp PAGE_UP                          &kp N   &kp M                 &kp COMMA         &kp DOT           &kp SLASH                   &kp RIGHT_SHIFT
 &mo 3           &kp GRAVE          &kp CAPS         &kp LEFT_ARROW   &kp RIGHT_ARROW              &kp BSPC  &kp DEL  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp DOWN_ARROW        &kp UP_ARROW      &kp LBKT          &kp RBKT                    &mo 3
             >;
@@ -308,7 +332,7 @@
             bindings = <
 &kp LBKT         &engram_1          &engram_2        &engram_3        &engram_4            &engram_5             &trans                                      &trans  &engram_6              &engram_7             &engram_8         &engram_9         &engram_0           &kp RBKT
 &engram_at_sign  &kp B              &kp Y            &kp O            &kp U                &engram_single_quote  &trans                                      &trans  &engram_double_quotes  &kp L                 &kp D             &kp W             &kp V               &engram_hash
-&kp ESCAPE       &lhm LEFT_SHIFT C  &lhm LEFT_GUI I  &lhm LEFT_ALT E  &lhm LEFT_CONTROL A  &engram_comma         &trans  &trans  &trans      &trans  &trans  &trans  &engram_period         &rhm RIGHT_CONTROL H  &rhm RIGHT_ALT T  &rhm RIGHT_GUI S  &rhm RIGHT_SHIFT N  &kp TAB
+&kp ESCAPE       &lhs LEFT_SHIFT C  &lhm LEFT_GUI I  &lhm LEFT_ALT E  &lhm LEFT_CONTROL A  &engram_comma         &trans  &trans  &trans      &trans  &trans  &trans  &engram_period         &rhm RIGHT_CONTROL H  &rhm RIGHT_ALT T  &rhm RIGHT_GUI S  &rhs RIGHT_SHIFT N  &kp TAB
 &trans           &kp G              &kp X            &kp J            &kp K                &kp MINUS                             &trans      &trans                  &engram_question       &kp R                 &kp M             &kp F             &kp P               &trans
 &trans           &kp Z              &caps_word       &trans           &trans                                     &trans  &trans  &trans      &trans  &trans  &trans                         &trans                &trans            &engram_slash     &kp Q               &trans
             >;
