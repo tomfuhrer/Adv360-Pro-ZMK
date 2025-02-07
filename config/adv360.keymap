@@ -251,67 +251,67 @@
         home {
             bindings = <&kp HOME>;
             key-positions = <23 24>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         end {
             bindings = <&kp END>;
             key-positions = <55 56>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         page_up {
             bindings = <&kp PAGE_UP>;
             key-positions = <25 26>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         page_down {
             bindings = <&kp PAGE_DOWN>;
             key-positions = <57 58>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         up_arrow {
             bindings = <&kp UP_ARROW>;
             key-positions = <24 25>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         down_arrow {
             bindings = <&kp DOWN_ARROW>;
             key-positions = <56 57>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         left_arrow {
             bindings = <&kp LEFT_ARROW>;
             key-positions = <41 42>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         right_arrow {
             bindings = <&kp RIGHT_ARROW>;
             key-positions = <43 44>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <43 44 70>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         shift_tab {
             bindings = <&kp RS(TAB)>;
             key-positions = <70 41 42>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <29 30 65>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
     };
 
