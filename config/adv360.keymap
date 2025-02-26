@@ -1,300 +1,304 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/stp.h>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
-#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
-  behaviors {
-    #include "macros.dtsi"
+    behaviors {
+        #include "macros.dtsi"
     #include "version.dtsi"
 
-    lhm: left_homerow_mods {
-      compatible = "zmk,behavior-hold-tap";
-      label = "LEFT_HOMEROW_MODS";
-      #binding-cells = <2>;
-      tapping-term-ms = <375>;
-      bindings = <&kp>, <&kp>;
+        lhm: left_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <375>;
+            bindings = <&kp>, <&kp>;
 
-      hold-trigger-on-release;
-      hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 37 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
-      flavor = "balanced";
-      require-prior-idle-ms = <300>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 37 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
+            flavor = "balanced";
+            require-prior-idle-ms = <300>;
+        };
+
+        rhm: right_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <375>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
+            flavor = "balanced";
+            require-prior-idle-ms = <300>;
+        };
+
+        lhs: left_homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_HOMEROW_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <375>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 37 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
+            flavor = "balanced";
+        };
+
+        rhs: right_homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_HOMEROW_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <375>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
+            flavor = "balanced";
+        };
+
+        engram_1: engram_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_1";
+            bindings = <&kp NUMBER_1>, <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_2: engram_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_2";
+            bindings = <&kp NUMBER_2>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_3: engram_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_3";
+            bindings = <&kp NUMBER_3>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_4: engram_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_4";
+            bindings = <&kp NUMBER_4>, <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_5: engram_5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_5";
+            bindings = <&kp NUMBER_5>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_6: engram_6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_6";
+            bindings = <&kp NUMBER_6>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_7: engram_7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_7";
+            bindings = <&kp NUMBER_7>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_8: engram_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_8";
+            bindings = <&kp NUMBER_8>, <&kp AMPERSAND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_9: engram_9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_9";
+            bindings = <&kp NUMBER_9>, <&kp PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_0: engram_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_0";
+            bindings = <&kp NUMBER_0>, <&kp ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_single_quote: engram_single_quote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_SINGLE_QUOTE";
+            bindings = <&kp SINGLE_QUOTE>, <&kp LEFT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_double_quotes: engram_double_quotes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_DOUBLE_QUOTES";
+            bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_comma: engram_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_COMMA";
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_period: engram_period {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_PERIOD";
+            bindings = <&kp PERIOD>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_question: engram_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_QUESTION";
+            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_hash: engram_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_HASH";
+            bindings = <&kp HASH>, <&kp DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_at_sign: engram_at_sign {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_AT_SIGN";
+            bindings = <&kp AT_SIGN>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        engram_slash: engram_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_SLASH";
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
-    rhm: right_homerow_mods {
-      compatible = "zmk,behavior-hold-tap";
-      label = "RIGHT_HOMEROW_MODS";
-      #binding-cells = <2>;
-      tapping-term-ms = <375>;
-      bindings = <&kp>, <&kp>;
+    keymap {
+        compatible = "zmk,keymap";
 
-      hold-trigger-on-release;
-      hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
-      flavor = "balanced";
-      require-prior-idle-ms = <300>;
+        default_layer {
+            display-name = "Base";
+            bindings = <
+&kp EQUAL       &kp N1           &kp N2           &kp N3               &kp N4             &kp N5  &tog 2                                                     &mo 4      &kp N6  &kp N7              &kp N8                &kp N9            &kp N0                    &kp MINUS
+&kp TAB         &kp Q            &kp W            &kp E                &kp R              &kp T   &none                                                      &none      &kp Y   &kp U               &kp I                 &kp O             &kp P                     &kp BSLH
+&kp ESC         &lhm LEFT_GUI A  &lhm LEFT_ALT S  &lhm LEFT_CONTROL D  &lhs LEFT_SHIFT F  &kp G   &none     &mo 2    &none         &none          &none      &none      &kp H   &rhs RIGHT_SHIFT J  &rhm RIGHT_CONTROL K  &rhm RIGHT_ALT L  &rhm RIGHT_GUI SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &kp Z            &kp X            &kp C                &kp V              &kp B                      &kp HOME      &kp PAGE_UP                          &kp N   &kp M               &kp COMMA             &kp DOT           &kp SLASH                 &kp RIGHT_SHIFT
+&mo 3           &kp GRAVE        &kp CAPS         &kp LEFT_ARROW       &kp RIGHT_ARROW            &kp BSPC  &kp DEL  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp DOWN_ARROW      &kp UP_ARROW          &kp LBKT          &kp RBKT                  &mo 3
+            >;
+        };
+
+        engram {
+            display-name = "Engram";
+            bindings = <
+&kp LBKT         &engram_1        &engram_2        &engram_3            &engram_4          &engram_5             &trans                                      &trans  &engram_6              &engram_7           &engram_8             &engram_9         &engram_0         &kp RBKT
+&engram_at_sign  &kp B            &kp Y            &kp O                &kp U              &engram_single_quote  &trans                                      &trans  &engram_double_quotes  &kp L               &kp D                 &kp W             &kp V             &engram_hash
+&kp ESCAPE       &lhm LEFT_GUI C  &lhm LEFT_ALT I  &lhm LEFT_CONTROL E  &lhs LEFT_SHIFT A  &engram_comma         &trans  &trans  &trans      &trans  &trans  &trans  &engram_period         &rhs RIGHT_SHIFT H  &rhm RIGHT_CONTROL T  &rhm RIGHT_ALT S  &rhm RIGHT_GUI N  &kp TAB
+&trans           &kp G            &kp X            &kp J                &kp K              &kp MINUS                             &trans      &trans                  &engram_question       &kp R               &kp M                 &kp F             &kp P             &trans
+&trans           &kp Z            &caps_word       &trans               &trans                                   &trans  &trans  &trans      &trans  &trans  &trans                         &trans              &trans                &engram_slash     &kp Q             &trans
+            >;
+        };
+
+        keypad {
+            display-name = "Kp";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans     &trans  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans     &trans  &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans     &trans  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                     &trans  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &kp KP_N0          &trans      &trans        &kp KP_DOT     &trans           &trans
+            >;
+        };
+
+        fn {
+            display-name = "Fn";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &kp F13  &kp F14  &kp F15  &kp F16  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &kp F9   &kp F10  &kp F11  &kp F12  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp F5   &kp F6   &kp F7   &kp F8   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &kp F1   &kp F2   &kp F3   &kp F4   &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans   &trans   &trans   &trans   &trans
+            >;
+        };
+
+        mod {
+            display-name = "Mod";
+            bindings = <
+&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans           &none  &none       &none       &none  &none  &none
+&none           &tog 1        &none         &none         &none         &none         &bootloader                                            &bootloader      &none  &none       &none       &none  &none  &none
+&studio_unlock  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &stp STP_BAT     &none  &none       &none       &none  &none  &none
+&none           &none         &none         &none         &macro_ver    &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
+&none           &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
+            >;
+        };
+
+        extra1 {
+            display-name = "Red";
+            status = "reserved";
+        };
+
+        extra2 {
+            display-name = "Purple";
+            status = "reserved";
+        };
+
+        extra3 {
+            display-name = "Cyan";
+            status = "reserved";
+        };
+
+        extra4 {
+            display-name = "Yellow";
+            status = "reserved";
+        };
     };
-
-    lhs: left_homerow_shift {
-      compatible = "zmk,behavior-hold-tap";
-      label = "LEFT_HOMEROW_SHIFT";
-      #binding-cells = <2>;
-      tapping-term-ms = <375>;
-      bindings = <&kp>, <&kp>;
-
-      hold-trigger-on-release;
-      hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 37 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75>;
-      flavor = "balanced";
-    };
-
-    rhs: right_homerow_shift {
-      compatible = "zmk,behavior-hold-tap";
-      label = "RIGHT_HOMEROW_SHIFT";
-      #binding-cells = <2>;
-      tapping-term-ms = <375>;
-      bindings = <&kp>, <&kp>;
-
-      hold-trigger-on-release;
-      hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
-      flavor = "balanced";
-    };
-
-    engram_1: engram_1 {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_1";
-      bindings = <&kp NUMBER_1>, <&kp PIPE>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_2: engram_2 {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_2";
-      bindings = <&kp NUMBER_2>, <&kp EQUAL>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_3: engram_3 {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_3";
-      bindings = <&kp NUMBER_3>, <&kp TILDE>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_4: engram_4 {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_4";
-      bindings = <&kp NUMBER_4>, <&kp PLUS>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_5: engram_5 {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_5";
-      bindings = <&kp NUMBER_5>, <&kp LESS_THAN>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_6: engram_6 {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_6";
-      bindings = <&kp NUMBER_6>, <&kp GREATER_THAN>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_7: engram_7 {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_7";
-      bindings = <&kp NUMBER_7>, <&kp CARET>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_8: engram_8 {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_8";
-      bindings = <&kp NUMBER_8>, <&kp AMPERSAND>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_9: engram_9 {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_9";
-      bindings = <&kp NUMBER_9>, <&kp PERCENT>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_0: engram_0 {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_0";
-      bindings = <&kp NUMBER_0>, <&kp ASTERISK>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_single_quote: engram_single_quote {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_SINGLE_QUOTE";
-      bindings = <&kp SINGLE_QUOTE>, <&kp LEFT_PARENTHESIS>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_double_quotes: engram_double_quotes {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_DOUBLE_QUOTES";
-      bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_comma: engram_comma {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_COMMA";
-      bindings = <&kp COMMA>, <&kp SEMICOLON>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_period: engram_period {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_PERIOD";
-      bindings = <&kp PERIOD>, <&kp COLON>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_question: engram_question {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_QUESTION";
-      bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_hash: engram_hash {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_HASH";
-      bindings = <&kp HASH>, <&kp DOLLAR>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_at_sign: engram_at_sign {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_AT_SIGN";
-      bindings = <&kp AT_SIGN>, <&kp GRAVE>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    engram_slash: engram_slash {
-      compatible = "zmk,behavior-mod-morph";
-      label = "ENGRAM_SLASH";
-      bindings = <&kp SLASH>, <&kp BACKSLASH>;
-
-      #binding-cells = <0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-  };
-
-  keymap {
-    compatible = "zmk,keymap";
-
-    default_layer {
-      display-name = "Base";
-      bindings = <
-        &kp EQUAL       &kp N1             &kp N2           &kp N3           &kp N4               &kp N5  &tog 2                                                     &mo 4      &kp N6  &kp N7                &kp N8            &kp N9            &kp N0                      &kp MINUS
-        &kp TAB         &kp Q              &kp W            &kp E            &kp R                &kp T   &none                                                      &none      &kp Y   &kp U                 &kp I             &kp O             &kp P                       &kp BSLH
-        &kp ESC         &lhm LEFT_GUI A  &lhm LEFT_ALT S  &lhm LEFT_CONTROL D  &lhs LEFT_SHIFT F  &kp G   &none     &mo 2    &none         &none          &none      &none      &kp H   &rhs RIGHT_SHIFT J  &rhm RIGHT_CONTROL K  &rhm RIGHT_ALT L  &rhm RIGHT_GUI SEMICOLON  &kp SQT
-        &kp LEFT_SHIFT  &kp Z              &kp X            &kp C            &kp V                &kp B                      &kp HOME      &kp PAGE_UP                          &kp N   &kp M                 &kp COMMA         &kp DOT           &kp SLASH                   &kp RIGHT_SHIFT
-        &mo 3           &kp GRAVE          &kp CAPS         &kp LEFT_ARROW   &kp RIGHT_ARROW              &kp BSPC  &kp DEL  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp DOWN_ARROW        &kp UP_ARROW      &kp LBKT          &kp RBKT                    &mo 3
-      >;
-    };
-    engram {
-      display-name = "Engram";
-      bindings = <
-        &kp LBKT         &engram_1          &engram_2        &engram_3        &engram_4            &engram_5             &trans                                      &trans  &engram_6              &engram_7             &engram_8         &engram_9         &engram_0           &kp RBKT
-        &engram_at_sign  &kp B              &kp Y            &kp O            &kp U                &engram_single_quote  &trans                                      &trans  &engram_double_quotes  &kp L                 &kp D             &kp W             &kp V               &engram_hash
-        &kp ESCAPE       &lhm LEFT_GUI C  &lhm LEFT_ALT I  &lhm LEFT_CONTROL E  &lhs LEFT_SHIFT A  &engram_comma         &trans  &trans  &trans      &trans  &trans  &trans  &engram_period         &rhs RIGHT_SHIFT H  &rhm RIGHT_CONTROL T  &rhm RIGHT_ALT S  &rhm RIGHT_GUI N  &kp TAB
-        &trans           &kp G              &kp X            &kp J            &kp K                &kp MINUS                             &trans      &trans                  &engram_question       &kp R                 &kp M             &kp F             &kp P               &trans
-        &trans           &kp Z              &caps_word       &trans           &trans                                     &trans  &trans  &trans      &trans  &trans  &trans                         &trans                &trans            &engram_slash     &kp Q               &trans
-      >;
-    };
-    keypad {
-      display-name = "Kp";
-      bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans     &trans  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans     &trans  &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans     &trans  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                     &trans  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
-        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &kp KP_N0          &trans      &trans        &kp KP_DOT     &trans           &trans
-      >;
-    };
-    fn {
-      display-name = "Fn";
-      bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &kp F13  &kp F14  &kp F15  &kp F16  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &kp F9   &kp F10  &kp F11  &kp F12  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp F5   &kp F6   &kp F7   &kp F8   &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &kp F1   &kp F2   &kp F3   &kp F4   &trans
-        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans   &trans   &trans   &trans   &trans
-      >;
-    };
-    mod {
-      display-name = "Mod";
-      bindings = <
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                     &trans                 &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none        &none        &bootloader                                                               &bootloader            &none        &none        &none        &none &none &none
-        &studio_unlock &none        &none        &none        &none        &none        &none                   &none &none &bt BT_CLR &none                      &stp STP_BAT &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &macro_ver   &none                                      &none &none                                                        &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none &none &none
-      >;
-    };
-    extra1 {
-      display-name = "Red";
-      status = "reserved";
-    };
-
-    extra2 {
-      display-name = "Purple";
-      status = "reserved";
-    };
-
-    extra3 {
-      display-name = "Cyan";
-      status = "reserved";
-    };
-
-    extra4 {
-      display-name = "Yellow";
-      status = "reserved";
-    };
-  };
 };
