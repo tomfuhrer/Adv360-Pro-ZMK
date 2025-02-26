@@ -272,7 +272,7 @@
             display-name = "Nav";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans   &trans  &kp KP_CLEAR  &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans   &trans  &none         &none      &none      &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans   &trans  &kp HOME      &kp PG_UP  &kp PG_DN  &kp END    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans   &trans  &kp LEFT      &kp UP     &kp DOWN   &kp RIGHT  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                   &trans  &kp HOME      &kp PG_UP  &kp PG_DN  &kp END    &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &kp INS          &trans        &trans     &kp DEL    &trans     &trans
