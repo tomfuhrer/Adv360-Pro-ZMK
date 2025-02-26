@@ -271,11 +271,11 @@
         navigation {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans   &trans  &kp KP_CLEAR  &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans   &trans  &kp HOME      &kp UP     &kp PG_UP  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans   &trans  &kp LEFT      &kp KP_N5  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                   &trans  &kp PG_DN     &kp DOWN   &kp END    &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &kp INS          &trans        &trans     &kp DEL    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans   &trans  &kp KP_CLEAR  &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans   &trans  &kp HOME      &kp UP    &kp PG_UP  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans   &trans  &kp LEFT      &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                   &trans  &kp PG_DN     &kp DOWN  &kp END    &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &kp INS          &trans        &trans    &kp DEL    &trans  &trans
             >;
         };
 
