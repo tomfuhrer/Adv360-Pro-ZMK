@@ -232,57 +232,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        combo_home {
-            bindings = <&kp HOME>;
-            key-positions = <23 24>;
-            layers = <2>;
-        };
-
-        combo_end {
-            bindings = <&kp END>;
-            key-positions = <55 56>;
-            layers = <2>;
-        };
-
-        combo_page_up {
-            bindings = <&kp PG_UP>;
-            key-positions = <25 26>;
-            layers = <2>;
-        };
-
-        combo_page_down {
-            bindings = <&kp PG_DN>;
-            key-positions = <57 58>;
-            layers = <2>;
-        };
-
-        combo_up {
-            bindings = <&kp UP>;
-            key-positions = <24 25>;
-            layers = <2>;
-        };
-
-        combo_down {
-            bindings = <&kp DOWN>;
-            key-positions = <56 57>;
-            layers = <2>;
-        };
-
-        combo_left {
-            bindings = <&kp LEFT>;
-            key-positions = <41 42>;
-            layers = <2>;
-        };
-
-        combo_right {
-            bindings = <&kp RIGHT>;
-            key-positions = <43 44>;
-            layers = <2>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
