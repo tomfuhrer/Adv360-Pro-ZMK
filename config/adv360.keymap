@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTOSHIFT_LEFT_HOLD_TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <260>;
             flavor = "tap-preferred";
             bindings = <&ls>, <&kp>;
         };
@@ -23,9 +23,180 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTOSHIFT_RIGHT_HOLD_TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <260>;
             flavor = "tap-preferred";
             bindings = <&rs>, <&kp>;
+        };
+
+        mo_tog: mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_TOG";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <260>;
+        };
+
+        ng_1: engram_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_1";
+            bindings = <&kp NUMBER_1>, <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_2: engram_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_2";
+            bindings = <&kp NUMBER_2>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_3: engram_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_3";
+            bindings = <&kp NUMBER_3>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_4: engram_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_4";
+            bindings = <&kp NUMBER_4>, <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_5: engram_5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_5";
+            bindings = <&kp NUMBER_5>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_6: engram_6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_6";
+            bindings = <&kp NUMBER_6>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_7: engram_7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_7";
+            bindings = <&kp NUMBER_7>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_8: engram_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_8";
+            bindings = <&kp NUMBER_8>, <&kp AMPERSAND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_9: engram_9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_9";
+            bindings = <&kp NUMBER_9>, <&kp PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_0: engram_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_0";
+            bindings = <&kp NUMBER_0>, <&kp ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_1qt: engram_single_quote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_SINGLE_QUOTE";
+            bindings = <&kp SINGLE_QUOTE>, <&kp LEFT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_2qt: engram_double_quotes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_DOUBLE_QUOTES";
+            bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_cm: engram_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_COMMA";
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_prd: engram_period {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_PERIOD";
+            bindings = <&kp PERIOD>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_qstn: engram_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_QUESTION";
+            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_hsh: engram_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_HASH";
+            bindings = <&kp HASH>, <&kp DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_atsgn: engram_at_sign {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_AT_SIGN";
+            bindings = <&kp AT_SIGN>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ng_slsh: engram_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENGRAM_SLASH";
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -91,11 +262,22 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&asr EQUAL  &asr N1     &asr N2   &asr N3   &asr N4    &asr N5  &tog 1                                                   &mo 3      &asl N6  &asl N7  &asl N8     &asl N9    &asl N0    &asl MINUS
-&kp TAB     &asr Q      &asr W    &asr E    &asr R     &asr T   &none                                                    &none      &asl Y   &asl U   &asl I      &asl O     &asl P     &asl BSLH
-&kp ESC     &asr A      &asr S    &asr D    &asr F     &asr G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &asl H   &asl J   &asl K      &asl L     &asl SEMI  &asl SQT
-&kp LSHFT   &asr Z      &asr X    &asr C    &asr V     &asr B                        &kp HOME      &kp PG_UP                        &asl N   &asl M   &asl COMMA  &asl DOT   &asl FSLH  &kp RSHFT
-&mo 2       &asr GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT           &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE           &kp UP   &kp DOWN    &asl LBKT  &asl RBKT  &mo 2
+&asr EQUAL  &asr N1     &asr N2   &asr N3   &asr N4    &asr N5  &mo_tog 2 2                                                  &mo 5      &asl N6  &asl N7   &asl N8       &asl N9    &asl N0    &asl MINUS
+&kp TAB     &asr Q      &asr W    &asr E    &asr R     &asr T   &none                                                        &none      &asl Y   &asl U    &asl I        &asl O     &asl P     &asl BSLH
+&kp ESC     &asr A      &asr S    &asr D    &asr F     &asr G   &none        &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL   &none      &asl H   &asl J    &asl K        &asl L     &asl SEMI  &asl SQT
+&kp LSHFT   &asr Z      &asr X    &asr C    &asr V     &asr B                           &kp HOME      &kp PG_UP                         &asl N   &asl M    &asl COMMA    &asl DOT   &asl FSLH  &kp RSHFT
+&mo 4       &asr GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT           &kp BSPC     &kp DEL    &kp END       &kp PG_DN  &asl ENTER  &kp SPACE           &kp DOWN  &kp UP_ARROW  &asl LBKT  &asl RBKT  &tog 3
+            >;
+        };
+
+        engram {
+            display-name = "Engram";
+            bindings = <
+&kp LBKT    &ng_1  &ng_2       &ng_3   &ng_4   &ng_5      &trans                                      &trans  &ng_6     &ng_7   &ng_8   &ng_9     &ng_0  &kp RBKT
+&ng_atsgn   &kp B  &kp Y       &kp O   &kp U   &ng_1qt    &trans                                      &trans  &ng_2qt   &kp L   &kp D   &kp W     &kp V  &ng_hsh
+&kp ESCAPE  &kp C  &kp I       &kp E   &kp A   &ng_cm     &trans  &trans  &trans      &trans  &trans  &trans  &ng_prd   &kp H   &kp T   &kp S     &kp N  &kp TAB
+&trans      &kp G  &kp X       &kp J   &kp K   &kp MINUS                  &trans      &trans                  &ng_qstn  &kp R   &kp M   &kp F     &kp P  &trans
+&trans      &kp Z  &caps_word  &trans  &trans             &trans  &trans  &trans      &trans  &trans  &trans            &trans  &trans  &ng_slsh  &kp Q  &trans
             >;
         };
 
