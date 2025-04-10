@@ -17,6 +17,8 @@
             tapping-term-ms = <260>;
             flavor = "tap-preferred";
             bindings = <&ls>, <&kp>;
+
+            quick-tap-ms = <260>;
         };
 
         asr_ht: autoshift_right_hold_tap {
@@ -26,6 +28,8 @@
             tapping-term-ms = <260>;
             flavor = "tap-preferred";
             bindings = <&rs>, <&kp>;
+
+            quick-tap-ms = <260>;
         };
 
         mo_tog: mo_tog {
