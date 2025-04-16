@@ -266,22 +266,22 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &mo_tog 2 2                                                 &mo 5      &kp N6  &kp N7    &kp N8        &kp N9    &kp N0    &kp MINUS
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &mo_tog 3 3                                                 &mo 6      &kp N6  &kp N7    &kp N8        &kp N9    &kp N0    &kp MINUS
 &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                       &none      &kp Y   &kp U     &kp I         &kp O     &kp P     &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none        &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp J     &kp K         &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                           &kp HOME      &kp PG_UP                        &kp N   &kp M     &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
-&mo 4      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC     &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT  &tog 3
+&mo 5      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC     &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT  &tog 5
             >;
         };
 
         default_layer_as {
             display-name = "Base AS";
             bindings = <
-&asr EQUAL  &asr N1     &asr N2   &asr N3   &asr N4    &asr N5  &trans                                      &trans  &asl N6  &asl N7   &asl N8       &asl N9    &asl N0    &asl MINUS
-&kp TAB     &asr Q      &asr W    &asr E    &asr R     &asr T   &trans                                      &trans  &asl Y   &asl U    &asl I        &asl O     &asl P     &asl BSLH
-&kp ESC     &asr A      &asr S    &asr D    &asr F     &asr G   &trans  &trans  &trans      &trans  &trans  &trans  &asl H   &asl J    &asl K        &asl L     &asl SEMI  &asl SQT
-&trans      &asr Z      &asr X    &asr C    &asr V     &asr B                   &trans      &trans                  &asl N   &asl M    &asl COMMA    &asl DOT   &asl FSLH  &trans
-&trans      &asr GRAVE  &kp CAPS  &trans    &trans              &trans  &trans  &trans      &trans  &trans  &trans           &trans    &trans        &asl LBKT  &asl RBKT  &trans
+&asr EQUAL  &asr N1     &asr N2   &asr N3  &asr N4  &asr N5  &trans                                      &trans  &asl N6  &asl N7  &asl N8     &asl N9    &asl N0    &asl MINUS
+&kp TAB     &asr Q      &asr W    &asr E   &asr R   &asr T   &trans                                      &trans  &asl Y   &asl U   &asl I      &asl O     &asl P     &asl BSLH
+&kp ESC     &asr A      &asr S    &asr D   &asr F   &asr G   &trans  &trans  &trans      &trans  &trans  &trans  &asl H   &asl J   &asl K      &asl L     &asl SEMI  &asl SQT
+&trans      &asr Z      &asr X    &asr C   &asr V   &asr B                   &trans      &trans                  &asl N   &asl M   &asl COMMA  &asl DOT   &asl FSLH  &trans
+&trans      &asr GRAVE  &kp CAPS  &trans   &trans            &trans  &trans  &trans      &trans  &trans  &trans           &trans   &trans      &asl LBKT  &asl RBKT  &trans
             >;
         };
 
