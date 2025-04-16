@@ -277,11 +277,11 @@
         default_layer_as {
             display-name = "Base AS";
             bindings = <
-&asr EQUAL  &asr N1     &asr N2   &asr N3  &asr N4  &asr N5  &trans                                      &trans  &asl N6  &asl N7  &asl N8     &asl N9    &asl N0    &asl MINUS
-&kp TAB     &asr Q      &asr W    &asr E   &asr R   &asr T   &trans                                      &trans  &asl Y   &asl U   &asl I      &asl O     &asl P     &asl BSLH
-&kp ESC     &asr A      &asr S    &asr D   &asr F   &asr G   &trans  &trans  &trans      &trans  &trans  &trans  &asl H   &asl J   &asl K      &asl L     &asl SEMI  &asl SQT
-&trans      &asr Z      &asr X    &asr C   &asr V   &asr B                   &trans      &trans                  &asl N   &asl M   &asl COMMA  &asl DOT   &asl FSLH  &trans
-&trans      &asr GRAVE  &kp CAPS  &trans   &trans            &trans  &trans  &trans      &trans  &trans  &trans           &trans   &trans      &asl LBKT  &asl RBKT  &trans
+&asr EQUAL  &asr N1     &asr N2   &asr N3  &asr N4  &asr N5  &trans                                          &trans  &asl N6  &asl N7  &asl N8     &asl N9    &asl N0    &asl MINUS
+&kp TAB     &asr Q      &asr W    &asr E   &asr R   &asr T   &trans                                          &trans  &asl Y   &asl U   &asl I      &asl O     &asl P     &asl BSLH
+&kp ESC     &asr A      &asr S    &asr D   &asr F   &asr G   &trans  &trans  &trans      &trans  &trans      &trans  &asl H   &asl J   &asl K      &asl L     &asl SEMI  &asl SQT
+&trans      &asr Z      &asr X    &asr C   &asr V   &asr B                   &trans      &trans                      &asl N   &asl M   &asl COMMA  &asl DOT   &asl FSLH  &trans
+&trans      &asr GRAVE  &kp CAPS  &trans   &trans            &trans  &trans  &trans      &trans  &asl ENTER  &trans           &trans   &trans      &asl LBKT  &asl RBKT  &trans
             >;
         };
 
