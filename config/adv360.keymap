@@ -288,11 +288,11 @@
         engram {
             display-name = "Engram";
             bindings = <
-&kp LBKT    &ng_1  &ng_2       &ng_3   &ng_4   &ng_5      &trans                                      &trans  &ng_6     &ng_7   &ng_8   &ng_9     &ng_0  &kp RBKT
-&ng_atsgn   &kp B  &kp Y       &kp O   &kp U   &ng_1qt    &trans                                      &trans  &ng_2qt   &kp L   &kp D   &kp W     &kp V  &ng_hsh
-&kp ESCAPE  &kp C  &kp I       &kp E   &kp A   &ng_cm     &trans  &trans  &trans      &trans  &trans  &trans  &ng_prd   &kp H   &kp T   &kp S     &kp N  &kp TAB
-&trans      &kp G  &kp X       &kp J   &kp K   &kp MINUS                  &trans      &trans                  &ng_qstn  &kp R   &kp M   &kp F     &kp P  &trans
-&trans      &kp Z  &caps_word  &trans  &trans             &trans  &trans  &trans      &trans  &trans  &trans            &trans  &trans  &ng_slsh  &kp Q  &trans
+&kp LBKT   &ng_1   &ng_2       &ng_3   &ng_4   &ng_5      &trans                                      &trans  &ng_6     &ng_7   &ng_8   &ng_9     &ng_0   &kp RBKT
+&ng_atsgn  &kp B   &kp Y       &kp O   &kp U   &ng_1qt    &trans                                      &trans  &ng_2qt   &kp L   &kp D   &kp W     &kp V   &ng_hsh
+&kp Z      &kp C   &kp I       &kp E   &kp A   &ng_cm     &trans  &trans  &trans      &trans  &trans  &trans  &ng_prd   &kp H   &kp T   &kp S     &kp N   &kp Q
+&trans     &kp G   &kp X       &kp J   &kp K   &kp MINUS                  &trans      &trans                  &ng_qstn  &kp R   &kp M   &kp F     &kp P   &trans
+&trans     &trans  &caps_word  &trans  &trans             &trans  &trans  &trans      &trans  &trans  &trans            &trans  &trans  &ng_slsh  &trans  &trans
             >;
         };
 
